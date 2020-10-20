@@ -7,14 +7,6 @@ strings = ["abc", "123", "kevin", "tom", "alan"]
 
 
 
-# Choose a random value off a li"st
-from random import choice
-from random import shuffle
-numbers = [1,2,3,4,5,6,7,8,9]
-random_number = choice(numbers)
-print("random_number =", random_number)
-shuffle(numbers)
-print("numbers =", numbers)
 
 
 print(len(values))          # Prints the lenght
@@ -40,6 +32,28 @@ print(strings)
 print("")
 
 
+
+numbers = [1,2,3,4,5,6,7,8,9]
+
+# Choose a random value off a list
+from random import choice
+random_number = choice(numbers)
+print("random_number =", random_number)
+
+
+# Shuffle the list of numbers
+from random import shuffle
+shuffle(numbers)
+print("numbers =", numbers)
+
+
+# get first 6 numbers off the list (index 0 to 5)
+print("numbers =", numbers[:6])
+
+
+# Create an empty list of size 26
+frequencies = [0] * 26
+print("frequencies =", frequencies)
 
 # List operations
 values.insert(4,7)      # insert x at position i
