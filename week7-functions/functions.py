@@ -132,15 +132,13 @@ print("\n\n 3. pydoc ***********************************************************
 # pydoc multiply_two_nums
 
 
-
-
 print("\n\n 3. Function Annotations ************************************************************************\n\n")    
 
 def greeting(name: str) -> int :
     return len(name)
 
 num_of_letters = greeting("KEVIN")
-print(num_of_letters)
+print("num_of_letters" , num_of_letters)
 
 # When typing out the greeting function, it will popup with the input and output type
 # function annotation is probably handier thatn perfect docstrings
