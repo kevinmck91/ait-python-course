@@ -1,4 +1,4 @@
-print("\n\n 1. Function Definition ************************************************************************\n\n")    
+print("\n 1. Function Definition ************************************************************************\n")
         
 from import_functions import hello
 hello()
@@ -12,7 +12,7 @@ my_function1()
     
     
 
-print("\n\n 2. Function Parameters ************************************************************************\n\n")    
+print("\n 2. Function Parameters ************************************************************************\n")
 
 
    
@@ -24,7 +24,7 @@ my_function2("kevin", "mullingar")
 
 
 
-print("\n\n 3. Inclusive functions ************************************************************************\n\n")    
+print("\n 3. Inclusive functions ************************************************************************\n")
 
 help(round)
 
@@ -35,7 +35,7 @@ print(round(22/7, 10))
 
 
 
-print("\n\n 3. Default Parameters ************************************************************************\n\n")    
+print("\n 3. Default Parameters ************************************************************************\n")
 
 from random import randint
 
@@ -55,7 +55,7 @@ roll_dice(4)
         
 
 
-print("\n\n 3. global variables ************************************************************************\n\n")    
+print("\n 3. global variables ************************************************************************\n")
 
 def get_a_word():
     global value
@@ -71,7 +71,7 @@ print(value , "Value is in scope after running function (bad practice)")
     
  
     
-print("\n\n 3. Return Statement ************************************************************************\n\n")    
+print("\n 3. Return Statement ************************************************************************\n")
 
 def multiply(n , m):
     return n * m
@@ -83,7 +83,7 @@ print(result)
 
 
 
-print("\n\n 3. Return Multiple Elements ************************************************************************\n\n")    
+print("\n 3. Return Multiple Elements ************************************************************************\n")
 
 def get_result_and_remainder(dividend, divisor):
     return(round(dividend / divisor), dividend % divisor)
@@ -101,7 +101,7 @@ print("remainder " , my_remainder)
 
 
 
-print("\n\n 3. Doc String ************************************************************************\n\n")    
+print("\n 3. Doc String ************************************************************************\n")
 
 def multiply_two_nums(n , m):
     """
@@ -125,14 +125,14 @@ help(multiply_two_nums)
 
 
 
-print("\n\n 3. pydoc ************************************************************************\n\n")    
+print("\n 3. pydoc ************************************************************************\n")
 
 
-# run tese in the command line
+# run these in the command line
 # pydoc multiply_two_nums
 
 
-print("\n\n 3. Function Annotations ************************************************************************\n\n")    
+print("\n 3. Function Annotations ************************************************************************\n")
 
 def greeting(name: str) -> int :
     return len(name)

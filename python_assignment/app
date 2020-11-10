@@ -1,0 +1,129 @@
+# A00679670
+
+# Import the file with try/except
+try:
+    with open("avocado.csv", encoding="utf8") as input_file:
+
+        line_count = 1
+
+        # specific to avacados.csv
+        list_id = []
+        list_date = []
+        list_average_price = []
+        list_total_volume = []
+        list_4046 = []
+        list_4225 = []
+        list_4770 = []
+        list_total_bags = []
+        list_small_bags = []
+        list_large_bags = []
+        list_xlarge_bags = []
+        list_type = []
+        list_year = []
+        list_region = []
+
+        for line in input_file:
+
+            try:
+
+                if line_count == 1:
+                    line_count = line_count + 1
+                    continue
+
+                if line_count == 20:
+                    break
+
+                value_id, value_date, value_average_price, value_total_volume, value_4046, value_4225, value_4770, value_total_bags, value_small_bags, value_large_bags, value_xlarge_bags, value_type, value_year, value_region = line.split(
+                    ",")
+
+                value_id = value_id.strip()
+                value_date = value_date.strip()
+                value_average_price = value_average_price.strip()
+                value_total_volume = value_total_volume.strip()
+                value_4046 = value_4046.strip()
+                value_4225 = value_4225.strip()
+                value_4770 = value_4770.strip()
+                value_total_bags = value_total_bags.strip()
+                value_small_bags = value_small_bags.strip()
+                value_large_bags = value_large_bags.strip()
+                value_xlarge_bags = value_xlarge_bags.strip()
+                value_type = value_type.strip()
+                value_year = value_year.strip()
+                value_region = value_region.strip()
+
+                list_id.append(float(value_id))
+                list_date.append(value_date)
+                list_average_price.append(float(value_average_price))
+                list_total_volume.append(float(value_total_volume))
+                list_4046.append(float(value_4046))
+                list_4225.append(float(value_4225))
+                list_4770.append(float(value_4770))
+                list_total_bags.append(float(value_total_bags))
+                list_small_bags.append(float(value_small_bags))
+                list_large_bags.append(float(value_large_bags))
+                list_xlarge_bags.append(float(value_xlarge_bags))
+                list_type.append(value_type)
+                list_year.append(float(value_year))
+                list_region.append(value_region)
+
+
+            except Exception as e:
+
+                print(f"Was unable line parse line : {line_count} of the file avocado.csv")
+                print(e)
+
+                # with open("", "a") as log_file:
+                # print(f"Was unable line parse line : {line} of the file {file_location}")
+
+            line_count = line_count + 1
+
+except:
+
+    print("unable to locate file")
+
+
+print(list_4770)
+
+# Print instruction from the user
+print("The application analysis the datafile avocado.csv \n")
+
+
+command = ""
+
+while(command != "Q"):
+
+    command = input(
+        "Please enter a command : \n"
+        "1 - \n"
+        "2 - \n"
+        "3 - \n"
+        "4 - \n"
+        "5 - \n"
+        "6 - \n"
+        "7 - \n"
+        "8 - \n"
+        "Q - Exit / Quit\n"
+    )
+
+    if command == "Q":
+        break
+    elif command == "1":
+        print( - Get the average price of an avacado over the 4 year period")
+    elif command == "2":
+        print()
+    elif command == "3":
+        print()
+    elif command == "4":
+        print()
+    elif command == "5":
+        print()
+    elif command == "6":
+        print()
+    elif command == "7":
+        print()
+    elif command == "8":
+        print()
+    elif command == "9":
+        print()
+    else :
+        print("Please enter a valid command")

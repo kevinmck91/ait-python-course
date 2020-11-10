@@ -1,0 +1,4 @@
+from assignment.utilities import file_IO_utils
+
+# get a list of individual columns or get all the lists for all the columns
+print(file_IO_utils.parse_file("./avocado.csv", "4770"))

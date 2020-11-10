@@ -1,0 +1,21 @@
+04/10/2020
+
+Environment set up
+- Set up a workspace with the CSV file that I am going to be working on
+- The learning log to keep track of issues as they arise
+- an application that will house the functionality for the applicaion
+- A manual for the user
+
+
+
+05/10/2020
+
+Write comments/sudo text as to how the application will function.
+The required user input to control the flow of the applicaion
+
+
+
+Read in all the raw data into a set of lists using the file utils
+
+- Create a function in the file utils folder to return each column in a list (for basic processing)
+- The function accepts a csv file location and it returns the a set of lists
