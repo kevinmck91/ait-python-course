@@ -1,12 +1,15 @@
 # A00679670
 
-# Import the file with try/except
+import math
+
+# Import the file with try/except and split each line into a seperate set of strings
+# store each string of the same type to a list for processing
 try:
     with open("avocado.csv", encoding="utf8") as input_file:
 
         line_count = 1
 
-        # specific to avacados.csv
+        # Create a set of empty lists
         list_id = []
         list_date = []
         list_average_price = []
@@ -22,6 +25,7 @@ try:
         list_year = []
         list_region = []
 
+        # For each line in the file...
         for line in input_file:
 
             try:
@@ -30,12 +34,9 @@ try:
                     line_count = line_count + 1
                     continue
 
-                if line_count == 20:
-                    break
+                value_id, value_date, value_average_price, value_total_volume, value_4046, value_4225, value_4770, value_total_bags, value_small_bags, value_large_bags, value_xlarge_bags, value_type, value_year, value_region = line.split(",")
 
-                value_id, value_date, value_average_price, value_total_volume, value_4046, value_4225, value_4770, value_total_bags, value_small_bags, value_large_bags, value_xlarge_bags, value_type, value_year, value_region = line.split(
-                    ",")
-
+                # Strip any unwanted whitespace
                 value_id = value_id.strip()
                 value_date = value_date.strip()
                 value_average_price = value_average_price.strip()
@@ -51,6 +52,7 @@ try:
                 value_year = value_year.strip()
                 value_region = value_region.strip()
 
+                # Add each value to the list
                 list_id.append(float(value_id))
                 list_date.append(value_date)
                 list_average_price.append(float(value_average_price))
@@ -66,14 +68,10 @@ try:
                 list_year.append(float(value_year))
                 list_region.append(value_region)
 
-
             except Exception as e:
 
                 print(f"Was unable line parse line : {line_count} of the file avocado.csv")
                 print(e)
-
-                # with open("", "a") as log_file:
-                # print(f"Was unable line parse line : {line} of the file {file_location}")
 
             line_count = line_count + 1
 
@@ -81,49 +79,183 @@ except:
 
     print("unable to locate file")
 
-
-print(list_4770)
-
 # Print instruction from the user
 print("The application analysis the datafile avocado.csv \n")
 
-
 command = ""
 
-while(command != "Q"):
+while command != "Q":
 
     command = input(
         "Please enter a command : \n"
-        "1 - \n"
-        "2 - \n"
-        "3 - \n"
+        "1 - Average avocado prices over the 4 year period\n"
+        "2 - Standard Deviation of an avocado over the past 4 years\n"
+        "3 - Get the correlation between Average avocado price & another factor\n"
         "4 - \n"
-        "5 - \n"
-        "6 - \n"
-        "7 - \n"
-        "8 - \n"
         "Q - Exit / Quit\n"
-    )
+    ).upper()
+
+    print(" ")
 
     if command == "Q":
+
         break
+
     elif command == "1":
-        print( - Get the average price of an avacado over the 4 year period")
+
+        command_one = input(
+            "   Get the average price of an avocado over the 4 year period\n"
+            "   Please enter a number corresponding to the instruction : \n"
+            "   1 - Average Price of an individual avocado over a 4 year period\n"
+            "   2 - Average amount of a small bags of avocados sold per day over a 4 year period\n"
+            "   3 - Average amount of a large bags of avocados sold per day over a 4 year period\n"
+            "   4 - Average amount of a x-large bags of avocados sold per day over a 4 year period\n"
+        )
+
+        if command_one == "1":
+            print(f"    Average Price of an individual avocado over a 4 year period : {sum(list_average_price) / len(list_average_price)}\n")
+        elif command_one == "2":
+            print(f"    Average amount of a small bags of avocados sold per day over a 4 year period : {sum(list_small_bags) / len(list_small_bags)}\n")
+        elif command_one == "3":
+            print(f"    Average amount of a large bags of avocados sold per day over a 4 year period : {sum(list_large_bags) / len(list_large_bags)}\n")
+        elif command_one == "4":
+            print(f"    Average amount of a x-large bags of avocados sold per day over a 4 year period : {sum(list_xlarge_bags) / len(list_xlarge_bags)}\n")
+        else:
+            print(f"    {command_one} is an invalid selection\n")
+
     elif command == "2":
-        print()
+
+        command_two = input(
+            "   Standard Deviation of an avocado over the past 4 years \n"
+            "   Please enter a number corresponding to the instruction : \n"
+            "   1 - Standard Deviation of an avocado price over a 4 year period\n"
+            "   2 - Standard Deviation of the amount of small bags of avocados sold over a 4 year period\n"
+            "   3 - Standard Deviation of the amount of large bag of avocados sold over a 4 year period\n"
+            "   4 - Standard Deviation of the amount of X-large bag of avocados sold over a 4 year period\n"
+        )
+        if command_two == "1":
+            average = sum(list_average_price) / len(list_average_price)
+            value_minus_average = [(x - average) ** 2 for x in list_average_price]
+            result = sum(list_average_price) / (len(list_average_price) - 1)
+            standard_deviation = math.sqrt(result)
+            print(f"    Standard Deviation of an individual avocado over a 4 year period : {standard_deviation}\n")
+        elif command_two == "2":
+            average = sum(list_small_bags) / len(list_small_bags)
+            value_minus_average = [(x - average) ** 2 for x in list_small_bags]
+            result = sum(list_small_bags) / (len(list_small_bags) - 1)
+            standard_deviation = math.sqrt(result)
+            print(f"    Standard Deviation of a small bag of avocados over a 4 year period : {standard_deviation}\n")
+        elif command_two == "3":
+            average = sum(list_large_bags) / len(list_large_bags)
+            value_minus_average = [(x - average) ** 2 for x in list_large_bags]
+            result = sum(list_large_bags) / (len(list_large_bags) - 1)
+            standard_deviation = math.sqrt(result)
+            print(f"    Standard Deviation of a small bag of avocados over a 4 year period : {standard_deviation}\n")
+        elif command_two == "4":
+            average = sum(list_xlarge_bags) / len(list_xlarge_bags)
+            value_minus_average = [(x - average) ** 2 for x in list_xlarge_bags]
+            result = sum(list_xlarge_bags) / (len(list_xlarge_bags) - 1)
+            standard_deviation = math.sqrt(result)
+            print(f"    Standard Deviation of a x-Large bag of avocados over a 4 year period : {standard_deviation}\n")
+        else:
+            print(f"    {command_two} is an invalid selection")
+
     elif command == "3":
-        print()
+
+        print("   Get the correlation between Average avocado price & another variable")
+
+        command_three = input(
+            "   Please enter a number corresponding to the instruction : \n"
+            "   1 - Get the correlation between Average avocado price & Total Volume of avocados sold\n"
+            "   2 - Get the correlation between Average avocado price & Small Bags of avocados sold  \n"
+            "   3 - Get the correlation between Average avocado price & Large Bags of avocados sold \n"
+            "   4 - Get the correlation between Average avocado price & X Large Bags of avocados sold  \n"
+        )
+
+        if command_three == "1":
+            # Top line
+            average_x = sum(list_average_price) / len(list_average_price)
+            average_y = sum(list_total_volume) / len(list_total_volume)
+
+            deviations_for_x = [x - average_x for x in list_average_price]
+            deviations_for_y = [y - average_y for y in list_total_volume]
+
+            # For multiplying corrosponding values in the two lists
+            deviations_for_xy = [x * y for (x, y) in zip(deviations_for_x, deviations_for_y)]
+
+            deviations_for_x_squ = [(x - average_x) ** 2 for x in list_average_price]
+            deviations_for_y_squ = [(y - average_y) ** 2 for y in list_total_volume]
+
+            corralation = sum(deviations_for_xy) / math.sqrt((sum(deviations_for_x_squ)) * (sum(deviations_for_y_squ)))
+
+            print(f"    Correlation between Average avocado price & Total Volume of avocados sold : {corralation}\n")
+
+        elif command_three == "2" :
+            # Top line
+            average_x = sum(list_average_price) / len(list_average_price)
+            average_y = sum(list_small_bags) / len(list_small_bags)
+
+            deviations_for_x = [x - average_x for x in list_average_price]
+            deviations_for_y = [y - average_y for y in list_small_bags]
+
+            # For multiplying corrosponding values in the two lists
+            deviations_for_xy = [x * y for (x, y) in zip(deviations_for_x, deviations_for_y)]
+
+            deviations_for_x_squ = [(x - average_x) ** 2 for x in list_average_price]
+            deviations_for_y_squ = [(y - average_y) ** 2 for y in list_small_bags]
+
+            corralation = sum(deviations_for_xy) / math.sqrt((sum(deviations_for_x_squ)) * (sum(deviations_for_y_squ)))
+
+            print(f"    Correlation between Average avocado price & Small Bags of avocados sold : {corralation}\n")
+
+        elif command_three == "3":
+            # Top line
+            average_x = sum(list_average_price) / len(list_average_price)
+            average_y = sum(list_large_bags) / len(list_large_bags)
+
+            deviations_for_x = [x - average_x for x in list_average_price]
+            deviations_for_y = [y - average_y for y in list_large_bags]
+
+            # For multiplying corrosponding values in the two lists
+            deviations_for_xy = [x * y for (x, y) in zip(deviations_for_x, deviations_for_y)]
+
+            deviations_for_x_squ = [(x - average_x) ** 2 for x in list_average_price]
+            deviations_for_y_squ = [(y - average_y) ** 2 for y in list_large_bags]
+
+            corralation = sum(deviations_for_xy) / math.sqrt((sum(deviations_for_x_squ)) * (sum(deviations_for_y_squ)))
+
+            print(f"    Correlation between Average avocado price & Large Bags of avocados sold  : {corralation}\n")
+
+        elif command_three == "4":
+            # Top line
+            average_x = sum(list_average_price) / len(list_average_price)
+            average_y = sum(list_xlarge_bags) / len(list_xlarge_bags)
+
+            deviations_for_x = [x - average_x for x in list_average_price]
+            deviations_for_y = [y - average_y for y in list_xlarge_bags]
+
+            # For multiplying corrosponding values in the two lists
+            deviations_for_xy = [x * y for (x, y) in zip(deviations_for_x, deviations_for_y)]
+
+            deviations_for_x_squ = [(x - average_x) ** 2 for x in list_average_price]
+            deviations_for_y_squ = [(y - average_y) ** 2 for y in list_xlarge_bags]
+
+            corralation = sum(deviations_for_xy) / math.sqrt((sum(deviations_for_x_squ)) * (sum(deviations_for_y_squ)))
+
+            print(f"    Correlation between Average avocado price & X Large Bags of avocados sold : {corralation}\n")
+
+        else :
+            print(f"    {command_three} is an invalid selection \n")
+
     elif command == "4":
         print()
-    elif command == "5":
-        print()
-    elif command == "6":
-        print()
-    elif command == "7":
-        print()
-    elif command == "8":
-        print()
-    elif command == "9":
-        print()
-    else :
-        print("Please enter a valid command")
+    else:
+        print("Please enter a valid command\n")
+
+    continue_command = input("Press any key begin again or Q to quit\n")
+    print(" ")
+
+    if continue_command.upper() == "Q":
+        command = "Q"
+
+print("The application has ended. You may go in peace")
