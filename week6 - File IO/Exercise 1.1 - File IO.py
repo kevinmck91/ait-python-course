@@ -1,3 +1,7 @@
+"""
+Read in a file and get the values
+"""
+
 with open("./data/supercomputers.txt") as super_computers_file:
     
     full_list = [float(x.strip()) for x in super_computers_file]

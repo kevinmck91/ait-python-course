@@ -14,8 +14,12 @@ Write comments/sudo text as to how the application will function.
 The required user input to control the flow of the applicaion
 
 
-
 Read in all the raw data into a set of lists using the file utils
 
 - Create a function in the file utils folder to return each column in a list (for basic processing)
 - The function accepts a csv file location and it returns the a set of lists
+
+
+10/11/2020
+- Add the add the log analysis to each part of the file to write to the externel log file
+- Import the datetime module as additional analysis to make the log file more verbose

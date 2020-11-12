@@ -15,10 +15,10 @@ print("Current local time : \n " , time.localtime())
 print("\n 2. The Date/Time module for dates only ************************************************************************\n")
 
 # The datetime Module provides the a number of classes for working with date/time
-# date - year, month, and day.
-# time - hour, minute,  second, microsecond, and tzinfo (timezone information).
-# datetime - year, month, day, hour, minute, second, microsecond, and tzinfo.
-# timedelta - A duration expressing the difference between two date, time, or datetime
+# .date - year, month, and day.
+# .time - hour, minute,  second, microsecond, and tzinfo (timezone information).
+# .datetime - year, month, day, hour, minute, second, microsecond, and tzinfo.
+# .timedelta - A duration expressing the difference between two date, time, or datetime
 
 import datetime
 
