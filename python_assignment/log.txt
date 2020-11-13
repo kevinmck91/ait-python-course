@@ -1,83 +1,19 @@
 
+2020-11-13 15:26:54.608340  ****** The Application has been initialised ******  
+2020-11-13 15:26:54.611340 - Unable line parse line : 104 of the file avocado.csv : too many values to unpack (expected 14) 
+2020-11-13 15:26:54.782340 - The word file has been opened and parsed successfully 
+2020-11-13 15:27:01.971340 - The user has chosen option : '2' from the main menu 
+2020-11-13 15:27:04.307340 - The user has chosen sub-option : '4' from the sub-menu 
+2020-11-13 15:27:15.873340 - File analysis has ended - The user has entered : '%' and opted to run the program again
+2020-11-13 15:27:22.632340 - The user has chosen option : '1' from the main menu 
+2020-11-13 15:27:24.024340 - The user has chosen sub-option : '1' from the sub-menu 
+2020-11-13 15:27:27.472340 - File analysis has ended - The user has entered : 'q' and opted to terminate the program 
+2020-11-13 15:27:27.475340 - the application has ended 
 
-2020-11-12 15:15:02.514986  ****** The Application has been initialised ******  
-2020-11-12 15:15:02.696004 - The word file has been opened and parsed successfully 
-2020-11-12 15:15:07.855520 - The user has chosen option : '3' from the main menu 
-2020-11-12 15:15:26.144349 - The user has chosen sub-option : '4' from the sub-menu 
-2020-11-12 15:15:34.985233 - The user has entered : 'fds' and opted to run the program again 
-2020-11-12 15:15:38.400574 - The user has chosen option : '2' from the main menu 
-2020-11-12 15:15:40.192754 - The user has chosen sub-option : '1' from the sub-menu 
-2020-11-12 15:15:42.488983 - The user has entered : 'q' and opted to quit the program 
-2020-11-12 15:15:42.491983 - the application has ended 
-
-
-2020-11-12 15:26:14.151143  ****** The Application has been initialised ******  
-2020-11-12 15:26:14.311159 - The word file has been opened and parsed successfully 
-2020-11-12 15:26:25.952323 - The user has chosen option : '2' from the main menu 
-
-
-2020-11-12 15:49:41.430857  ****** The Application has been initialised ******  
-2020-11-12 15:49:41.593873 - The word file has been opened and parsed successfully 
-2020-11-12 15:49:45.748289 - The user has chosen option : '2' from the main menu 
-2020-11-12 15:49:46.699384 - The user has chosen sub-option : '4' from the sub-menu 
-2020-11-12 15:49:47.955509 - The user has entered : '2' and opted to run the program again 
-2020-11-12 15:49:49.092623 - The user has chosen option : '3' from the main menu 
-2020-11-12 15:49:49.835697 - The user has chosen sub-option : '1' from the sub-menu 
-2020-11-12 15:49:50.387753 - The user has entered : '3' and opted to run the program again 
-2020-11-12 15:49:50.867801 - The user has chosen option : '4' from the main menu 
-2020-11-12 15:49:51.299844 - The user has entered : '5' and opted to run the program again 
-2020-11-12 15:49:51.683882 - The user has chosen option : 'F' from the main menu 
-2020-11-12 15:49:51.686882 - The user has invalid option : 'F from the main menu 
-2020-11-12 15:49:52.556969 - The user has entered : 'fg' and opted to run the program again 
-2020-11-12 15:49:53.364050 - The user has chosen option : 'GF' from the main menu 
-2020-11-12 15:49:53.367050 - The user has invalid option : 'GF from the main menu 
-2020-11-12 15:49:53.972111 - The user has entered : 'jh' and opted to run the program again 
-2020-11-12 15:49:54.620176 - The user has chosen option : 'FDG' from the main menu 
-2020-11-12 15:49:54.623176 - The user has invalid option : 'FDG from the main menu 
-2020-11-12 15:49:55.060220 - The user has entered : 'jh' and opted to run the program again 
-2020-11-12 15:49:55.580272 - The user has chosen option : '4' from the main menu 
-2020-11-12 15:49:56.140328 - The user has entered : '3' and opted to run the program again 
-2020-11-12 15:49:56.676381 - The user has chosen option : '5' from the main menu 
-2020-11-12 15:49:56.680382 - The user has invalid option : '5 from the main menu 
-2020-11-12 15:49:57.172431 - The user has entered : '7' and opted to run the program again 
-2020-11-12 15:49:57.652479 - The user has chosen option : '3' from the main menu 
-2020-11-12 15:49:58.220536 - The user has chosen sub-option : 'gf' from the sub-menu 
-2020-11-12 15:49:58.224536 - The user has invalid option : '3' from the sub menu 
-2020-11-12 15:49:58.596573 - The user has entered : 'h' and opted to run the program again 
-2020-11-12 15:49:59.020616 - The user has chosen option : '56' from the main menu 
-2020-11-12 15:49:59.023616 - The user has invalid option : '56 from the main menu 
-2020-11-12 15:49:59.380652 - The user has entered : '3' and opted to run the program again 
-2020-11-12 15:50:00.244738 - The user has chosen option : 'Q' from the main menu 
-2020-11-12 15:50:00.247738 - the application has ended 
-
-
-2020-11-12 16:12:37.288429  ****** The Application has been initialised ******  
-2020-11-12 16:12:37.927493 - The word file has been opened and parsed successfully 
-2020-11-12 16:13:42.364936 - The user has chosen option : '2' from the main menu 
-2020-11-12 16:15:38.570555 - The user has chosen sub-option : '1' from the sub-menu 
-2020-11-12 16:17:36.302327 - The user has entered : 'F' and opted to run the program again 
-2020-11-12 16:17:39.438641 - The user has chosen option : '1' from the main menu 
-2020-11-12 16:17:41.621859 - The user has chosen sub-option : '1' from the sub-menu 
-2020-11-12 16:18:08.494546 - The user has entered : 'D' and opted to run the program again 
-2020-11-12 16:18:15.087205 - The user has chosen option : '1' from the main menu 
-2020-11-12 16:18:18.439541 - The user has chosen sub-option : '2' from the sub-menu 
-
-
-2020-11-12 16:28:42.971988  ****** The Application has been initialised ******  
-2020-11-12 16:28:43.217012 - The word file has been opened and parsed successfully 
-2020-11-12 16:28:50.461737 - The user has chosen option : '4' from the main menu 
-
-
-2020-11-12 16:29:03.871077  ****** The Application has been initialised ******  
-2020-11-12 16:29:04.195110 - The word file has been opened and parsed successfully 
-2020-11-12 16:29:04.710161 - The user has chosen option : '4' from the main menu 
-
-
-2020-11-12 16:32:11.047793  ****** The Application has been initialised ******  
-2020-11-12 16:32:11.214810 - The word file has been opened and parsed successfully 
-2020-11-12 16:32:13.925081 - The user has chosen option : '4' from the main menu 
-
-
-2020-11-12 16:32:28.063495  ****** The Application has been initialised ******  
-2020-11-12 16:32:28.454534 - The word file has been opened and parsed successfully 
-2020-11-12 16:32:32.189907 - The user has chosen option : '4' from the main menu 
+2020-11-13 15:27:42.738340  ****** The Application has been initialised ******  
+2020-11-13 15:27:42.741340 - Unable line parse line : 104 of the file avocado.csv : too many values to unpack (expected 14) 
+2020-11-13 15:27:42.894340 - The word file has been opened and parsed successfully 
+2020-11-13 15:27:46.407340 - The user has chosen option : '2' from the main menu 
+2020-11-13 15:27:47.262340 - The user has chosen sub-option : '2' from the sub-menu 
+2020-11-13 15:27:49.270340 - File analysis has ended - The user has entered : 'q' and opted to terminate the program 
+2020-11-13 15:27:49.272340 - the application has ended 

@@ -2,16 +2,17 @@
 
 import math
 from datetime import datetime
+file_path = "avocado.csv"
 
 with open("./log.txt", "a") as log_file:
-    log_file.write(f"\n\n{datetime.now()}  ****** The Application has been initialised ******  \n")
+    log_file.write(f"\n{datetime.now()}  ****** The Application has been initialised ******  \n")
     log_file.close()
 
 ### Import the file with try/except and split each line into a seperate set of strings
 ### store each string of the same type to a list for processing
 try:
 
-    with open("avocado.csv", encoding="utf8") as input_file:
+    with open(file_path, encoding="utf8") as input_file:
 
         line_count = 1
 
@@ -76,28 +77,35 @@ try:
 
             except Exception as e:
 
-                # Write any exceptions to the log
-                with open("/log.txt", "a") as log_file:
-                    log_file.write(f"{datetime.now()} - Was unable line parse line : {line_count} of the file avocado.csv : \n {e} \n")
+                # Write any parse exceptions to the log and print a note of the error to the user
+                with open("./log.txt", "a") as log_file:
+                    log_file.write(f"{datetime.now()} - Unable line parse line : {line_count} of the file {file_path} : {e} \n")
                     log_file.close()
+
+                print(f"Note : Unable to parse line : {line_count} of the file {file_path}\n")
 
             line_count = line_count + 1
 
+    # If no file_pat exception has occurred write to the log that the
     with open("./log.txt", "a") as log_file:
         log_file.write(f"{datetime.now()} - The word file has been opened and parsed successfully \n")
         log_file.close()
 
-except:
+    command = ""
+    print(f"This application analysis the datafile {file_path} \n")
 
-    print("unable to locate file")
+except Exception as e:
+
+    with open("./log.txt", "a") as log_file:
+        log_file.write(f"{datetime.now()} - Unable to locate the file {file_path} : {e} \n")
+        log_file.close()
+
+    print(f"Unable to locate file {file_path}")
+
+    command = "Q"
 
 
-
-#### This section analyzes the file depednig on user input on a Main Menu and Sub Menu Basis
-print("The application analysis the datafile avocado.csv \n")
-
-command = ""
-
+### This section analyzes the file depednig on user input on a Main Menu and Sub Menu Basis
 while command != "Q":
 
 
@@ -329,33 +337,33 @@ while command != "Q":
     else:
         print("Please enter a valid command\n")
         with open("./log.txt", "a") as log_file:
-            log_file.write(f"{datetime.now()} - The user has invalid option : '{command} from the main menu \n")
+            log_file.write(f"{datetime.now()} - The user has chosen an invalid option : '{command} from the main menu \n")
             log_file.close()
 
 
 
 
-    ### The user has reached the end of the program, Ask them to start again...
+    ### The user has reached the end of the program, offer the option begin again...
     continue_command = input("Press any key begin again or Q to quit\n")
 
     print(" ")
 
-    ### The user opted to Quit...
+    ### The user has opted to Quit...
     if continue_command.upper() == "Q":
 
         command = "Q"
         with open("./log.txt", "a") as log_file:
-            log_file.write(f"{datetime.now()} - The user has entered : '{continue_command}' and opted to quit the program \n")
+            log_file.write(f"{datetime.now()} - File analysis has ended - The user has entered : '{continue_command}' and opted to terminate the program \n")
             log_file.close()
 
     ### The user opted to start again...
     else:
 
         with open("./log.txt", "a") as log_file:
-            log_file.write(f"{datetime.now()} - The user has entered : '{continue_command}' and opted to run the program again \n")
+            log_file.write(f"{datetime.now()} - File analysis has ended - The user has entered : '{continue_command}' and opted to run the program again \n")
             log_file.close()
 
-print("The application has ended. You may go in peace")
+print("The application has ended.")
 
 with open("./log.txt", "a") as log_file:
     log_file.write(f"{datetime.now()} - the application has ended \n")
