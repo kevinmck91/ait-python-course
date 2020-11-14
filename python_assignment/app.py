@@ -112,10 +112,11 @@ while command != "Q":
 ### This section provides the user to choose an value off the Main menu
     command = input(
         "Please enter a command : \n"
-        "1 - Average avocado prices over the 4 year period\n"
-        "2 - Standard Deviation of an avocado over the past 4 years\n"
-        "3 - Get the correlation between Average avocado price & another factor\n"
-        "4 - Get information about the data that is being analysed \n"
+        
+        "1 - Basic Statistics : Get information and basic statistics about the data being analysed\n"
+        "2 - Averages : Get the average for a specific data column \n"
+        "3 - Standard Deviation : Get the Standard Deviation for a specific data column \n"
+        "4 - Correlation: Get the Correlation between two data columns \n"
         "Q - Exit / Quit\n"
     ).upper()
 
@@ -130,7 +131,7 @@ while command != "Q":
         break
 
     ### if the user chooses 1 from the main menu...
-    elif command == "1":
+    elif command == "2":
 
         ### Show the user the Sub-menu-1
         command_one = input(
@@ -148,18 +149,18 @@ while command != "Q":
 
         ### Sub-menu-1 Option 1
         if command_one == "1":
-            print(f"    Average Price of an individual avocado over a 4 year period : {sum(list_average_price) / len(list_average_price)}\n")
+            print(f"    Average Price of an individual avocado over a 4 year period : € {str(round(sum(list_average_price) / len(list_average_price), 2))}\n")
 
         ### Sub-menu-1 Option 2
         elif command_one == "2":
-            print(f"    Average amount of a small bags of avocados sold per day over a 4 year period : {sum(list_small_bags) / len(list_small_bags)}\n")
+            print(f"    Average amount of a small bags of avocados sold per day over a 4 year period : {str(round(sum(list_small_bags) / len(list_small_bags), 2))} bags\n")
         ### Sub-menu-1 Option 3
         elif command_one == "3":
-            print(f"    Average amount of a large bags of avocados sold per day over a 4 year period : {sum(list_large_bags) / len(list_large_bags)}\n")
+            print(f"    Average amount of a large bags of avocados sold per day over a 4 year period : {str(round(sum(list_large_bags) / len(list_large_bags), 2))} bags\n")
 
         ### Sub-menu-1 Option 4
         elif command_one == "4":
-            print(f"    Average amount of a x-large bags of avocados sold per day over a 4 year period : {sum(list_xlarge_bags) / len(list_xlarge_bags)}\n")
+            print(f"    Average amount of a x-large bags of avocados sold per day over a 4 year period : {str(round(sum(list_xlarge_bags) / len(list_xlarge_bags), 2))} bags\n")
 
         ### Sub-menu-1 Option invlaid
         else:
@@ -167,7 +168,7 @@ while command != "Q":
 
 
     ### if the user chooses 2 from the main menu...
-    elif command == "2":
+    elif command == "3":
 
         ### Show the user the Sub-menu-2
         command_two = input(
@@ -189,7 +190,7 @@ while command != "Q":
             value_minus_average = [(x - average) ** 2 for x in list_average_price]
             result = sum(list_average_price) / (len(list_average_price) - 1)
             standard_deviation = math.sqrt(result)
-            print(f"    Standard Deviation of an individual avocado over a 4 year period : {standard_deviation}\n")
+            print(f"    Standard Deviation of an individual avocado price over a 4 year period : {str(round(standard_deviation, 3))}\n")
 
         ### Sub-menu-2 Option 2
         elif command_two == "2":
@@ -197,7 +198,7 @@ while command != "Q":
             value_minus_average = [(x - average) ** 2 for x in list_small_bags]
             result = sum(list_small_bags) / (len(list_small_bags) - 1)
             standard_deviation = math.sqrt(result)
-            print(f"    Standard Deviation of a small bag of avocados over a 4 year period : {standard_deviation}\n")
+            print(f"    Standard Deviation of the amount of small bags of avocados sold over a 4 year period : {str(round(standard_deviation, 3))}\n")
 
         ### Sub-menu-2 Option 3
         elif command_two == "3":
@@ -205,7 +206,7 @@ while command != "Q":
             value_minus_average = [(x - average) ** 2 for x in list_large_bags]
             result = sum(list_large_bags) / (len(list_large_bags) - 1)
             standard_deviation = math.sqrt(result)
-            print(f"    Standard Deviation of a small bag of avocados over a 4 year period : {standard_deviation}\n")
+            print(f"    Standard Deviation of the amount of large bag of avocados sold over a 4 year period : {str(round(standard_deviation, 3))}\n")
 
         ### Sub-menu-2 Option 4
         elif command_two == "4":
@@ -213,7 +214,7 @@ while command != "Q":
             value_minus_average = [(x - average) ** 2 for x in list_xlarge_bags]
             result = sum(list_xlarge_bags) / (len(list_xlarge_bags) - 1)
             standard_deviation = math.sqrt(result)
-            print(f"    Standard Deviation of a x-Large bag of avocados over a 4 year period : {standard_deviation}\n")
+            print(f"    Standard Deviation of the amount of X-large bag of avocados sold over a 4 year period : {str(round(standard_deviation, 3))}\n")
 
         ### Sub-menu-2 Option invalid
         else:
@@ -221,7 +222,7 @@ while command != "Q":
 
 
     ### if the user chooses 3 from the main menu...
-    elif command == "3":
+    elif command == "4":
 
         ### Show the user the Sub-menu-3
         command_three = input(
@@ -254,7 +255,7 @@ while command != "Q":
 
             corralation = sum(deviations_for_xy) / math.sqrt((sum(deviations_for_x_squ)) * (sum(deviations_for_y_squ)))
 
-            print(f"    Correlation between Average avocado price & Total Volume of avocados sold : {corralation}\n")
+            print(f"    Correlation between Average avocado price & Total Volume of avocados sold : { round(corralation, 3) }\n")
 
         ### Sub-menu-3 Option 2
         elif command_three == "2" :
@@ -273,7 +274,7 @@ while command != "Q":
 
             corralation = sum(deviations_for_xy) / math.sqrt((sum(deviations_for_x_squ)) * (sum(deviations_for_y_squ)))
 
-            print(f"    Correlation between Average avocado price & Small Bags of avocados sold : {corralation}\n")
+            print(f"    Correlation between Average avocado price & Small Bags of avocados sold : {round(corralation, 3)}\n")
 
         ### Sub-menu-3 Option 3
         elif command_three == "3":
@@ -292,7 +293,7 @@ while command != "Q":
 
             corralation = sum(deviations_for_xy) / math.sqrt((sum(deviations_for_x_squ)) * (sum(deviations_for_y_squ)))
 
-            print(f"    Correlation between Average avocado price & Large Bags of avocados sold  : {corralation}\n")
+            print(f"    Correlation between Average avocado price & Large Bags of avocados sold  : {round(corralation, 3)}\n")
 
         ### Sub-menu-3 Option 4
         elif command_three == "4":
@@ -311,7 +312,7 @@ while command != "Q":
 
             corralation = sum(deviations_for_xy) / math.sqrt((sum(deviations_for_x_squ)) * (sum(deviations_for_y_squ)))
 
-            print(f"    Correlation between Average avocado price & X Large Bags of avocados sold : {corralation}\n")
+            print(f"    Correlation between Average avocado price & X Large Bags of avocados sold : {round(corralation, 3)}\n")
 
         ### Sub-menu-3 Option invalid
         else :
@@ -323,12 +324,12 @@ while command != "Q":
 
 
     ### if the user chooses 4 from the main menu...
-    elif command == "4":
+    elif command == "1":
         print(f"    There are {line_count} unique lines in the file")
-        print(f"    Average avocado price Min/Max is : {min(list_average_price)}/{max(list_average_price)}")
-        print(f"    Daily price per small bag Min/Max is : {min(list_small_bags)}/{max(list_small_bags)} ")
-        print(f"    Daily per large bag Min/Max is : {min(list_large_bags)}/{max(list_large_bags)} ")
-        print(f"    Daily per X-large bag Min/Max is : {min(list_xlarge_bags)}/{max(list_xlarge_bags)} \n")
+        print(f"    The Max/Min Average price of an individual avocado: €{min(list_average_price)} / €{max(list_average_price)}")
+        print(f"    The Max/Min sale amount of a small avocado bag : {min(list_small_bags)} / {max(list_small_bags)} ")
+        print(f"    The Max/Min sale amount of a large avocado bag : {min(list_large_bags)} / {max(list_large_bags)} ")
+        print(f"    The Max/Min sale amount of a X-large small avocado bag : {min(list_xlarge_bags)} / {max(list_xlarge_bags)} \n")
 
 
 

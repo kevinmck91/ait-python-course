@@ -17,3 +17,108 @@
 2020-11-13 15:27:47.262340 - The user has chosen sub-option : '2' from the sub-menu 
 2020-11-13 15:27:49.270340 - File analysis has ended - The user has entered : 'q' and opted to terminate the program 
 2020-11-13 15:27:49.272340 - the application has ended 
+
+2020-11-14 19:50:04.703342  ****** The Application has been initialised ******  
+2020-11-14 19:50:04.803043 - The word file has been opened and parsed successfully 
+2020-11-14 19:50:08.720054 - The user has chosen option : '1' from the main menu 
+
+2020-11-14 19:55:37.497999  ****** The Application has been initialised ******  
+2020-11-14 19:55:37.602751 - The word file has been opened and parsed successfully 
+2020-11-14 19:55:39.768640 - The user has chosen option : '1' from the main menu 
+
+2020-11-14 19:56:15.451187  ****** The Application has been initialised ******  
+2020-11-14 19:56:15.543937 - The word file has been opened and parsed successfully 
+2020-11-14 19:56:28.081327 - The user has chosen option : '1' from the main menu 
+2020-11-14 19:56:37.193346 - File analysis has ended - The user has entered : '2' and opted to run the program again 
+2020-11-14 19:56:39.487997 - The user has chosen option : '2' from the main menu 
+2020-11-14 19:56:52.321005 - The user has chosen sub-option : '3' from the sub-menu 
+
+2020-11-14 20:58:58.568901  ****** The Application has been initialised ******  
+2020-11-14 20:58:58.661620 - The word file has been opened and parsed successfully 
+2020-11-14 20:59:13.096075 - The user has chosen option : '2' from the main menu 
+2020-11-14 21:00:51.504555 - The user has chosen sub-option : '1' from the sub-menu 
+
+2020-11-14 21:05:56.327902  ****** The Application has been initialised ******  
+2020-11-14 21:05:56.422649 - The word file has been opened and parsed successfully 
+2020-11-14 21:06:20.911625 - The user has chosen option : '2' from the main menu 
+2020-11-14 21:06:37.376185 - The user has chosen sub-option : '2' from the sub-menu 
+2020-11-14 21:06:42.264325 - File analysis has ended - The user has entered : '2' and opted to run the program again 
+2020-11-14 21:06:43.055254 - The user has chosen option : '2' from the main menu 
+2020-11-14 21:06:44.920476 - The user has chosen sub-option : '1' from the sub-menu 
+2020-11-14 21:07:18.009716 - File analysis has ended - The user has entered : '2' and opted to run the program again 
+2020-11-14 21:07:20.424172 - The user has chosen option : '2' from the main menu 
+2020-11-14 21:07:21.640488 - The user has chosen sub-option : '1' from the sub-menu 
+
+2020-11-14 21:07:28.185838  ****** The Application has been initialised ******  
+2020-11-14 21:07:28.286570 - The word file has been opened and parsed successfully 
+2020-11-14 21:07:36.343885 - The user has chosen option : '2' from the main menu 
+2020-11-14 21:08:14.497004 - The user has chosen sub-option : '4' from the sub-menu 
+
+2020-11-14 21:08:57.915546  ****** The Application has been initialised ******  
+2020-11-14 21:08:58.010291 - The word file has been opened and parsed successfully 
+2020-11-14 21:09:01.200792 - The user has chosen option : '3' from the main menu 
+2020-11-14 21:09:02.927619 - The user has chosen sub-option : '1' from the sub-menu 
+
+2020-11-14 21:18:16.239366  ****** The Application has been initialised ******  
+2020-11-14 21:18:16.334113 - The word file has been opened and parsed successfully 
+2020-11-14 21:18:19.806827 - The user has chosen option : '4' from the main menu 
+2020-11-14 21:18:23.894899 - The user has chosen sub-option : '1' from the sub-menu 
+2020-11-14 21:18:33.865058 - File analysis has ended - The user has entered : '1' and opted to run the program again 
+2020-11-14 21:18:35.824906 - The user has chosen option : '4' from the main menu 
+2020-11-14 21:18:37.184452 - The user has chosen sub-option : '1' from the sub-menu 
+
+2020-11-14 21:22:50.480141  ****** The Application has been initialised ******  
+2020-11-14 21:22:50.569899 - The word file has been opened and parsed successfully 
+2020-11-14 21:23:37.407862 - The user has chosen option : '1' from the main menu 
+2020-11-14 21:23:44.647308 - File analysis has ended - The user has entered : '' and opted to run the program again 
+2020-11-14 21:23:52.415591 - The user has chosen option : '2' from the main menu 
+2020-11-14 21:23:58.175402 - The user has chosen sub-option : '1' from the sub-menu 
+2020-11-14 21:24:41.888097 - File analysis has ended - The user has entered : '2' and opted to run the program again 
+2020-11-14 21:24:46.968382 - The user has chosen option : '3' from the main menu 
+2020-11-14 21:24:50.872588 - The user has chosen sub-option : '3' from the sub-menu 
+
+2020-11-14 21:27:43.359131  ****** The Application has been initialised ******  
+2020-11-14 21:27:43.456902 - The word file has been opened and parsed successfully 
+2020-11-14 21:27:49.064722 - The user has chosen option : '3' from the main menu 
+2020-11-14 21:27:57.712689 - The user has chosen sub-option : '3' from the sub-menu 
+2020-11-14 21:30:48.377610 - File analysis has ended - The user has entered : '3' and opted to run the program again 
+2020-11-14 21:30:50.864872 - The user has chosen option : '4' from the main menu 
+2020-11-14 21:30:54.232265 - The user has chosen sub-option : '4' from the sub-menu 
+2020-11-14 21:31:01.272002 - File analysis has ended - The user has entered : '4' and opted to run the program again 
+2020-11-14 21:31:02.350720 - The user has chosen option : '4' from the main menu 
+2020-11-14 21:31:03.249149 - The user has chosen sub-option : '3' from the sub-menu 
+2020-11-14 21:31:12.552738 - File analysis has ended - The user has entered : '2' and opted to run the program again 
+2020-11-14 21:31:14.025489 - The user has chosen option : '2' from the main menu 
+2020-11-14 21:31:16.575933 - The user has chosen sub-option : '2' from the sub-menu 
+2020-11-14 21:31:17.320992 - File analysis has ended - The user has entered : '3' and opted to run the program again 
+2020-11-14 21:31:20.280350 - The user has chosen option : '4' from the main menu 
+2020-11-14 21:31:22.120949 - The user has chosen sub-option : '2' from the sub-menu 
+2020-11-14 21:31:26.640811 - File analysis has ended - The user has entered : '' and opted to run the program again 
+2020-11-14 21:31:28.902778 - The user has chosen option : '4' from the main menu 
+2020-11-14 21:31:29.689084 - The user has chosen sub-option : '1' from the sub-menu 
+
+2020-11-14 21:33:57.236751  ****** The Application has been initialised ******  
+2020-11-14 21:33:57.329535 - The word file has been opened and parsed successfully 
+2020-11-14 21:34:04.737465 - The user has chosen option : '4' from the main menu 
+2020-11-14 21:34:12.320578 - The user has chosen sub-option : '3' from the sub-menu 
+
+2020-11-14 21:35:08.337795  ****** The Application has been initialised ******  
+2020-11-14 21:35:08.426589 - The word file has been opened and parsed successfully 
+2020-11-14 21:35:11.015681 - The user has chosen option : '3' from the main menu 
+2020-11-14 21:35:12.344868 - The user has chosen sub-option : '2' from the sub-menu 
+2020-11-14 21:35:18.240297 - File analysis has ended - The user has entered : '4' and opted to run the program again 
+2020-11-14 21:35:19.503859 - The user has chosen option : '4' from the main menu 
+2020-11-14 21:35:22.696444 - The user has chosen sub-option : '4' from the sub-menu 
+
+2020-11-14 21:37:17.651023  ****** The Application has been initialised ******  
+2020-11-14 21:37:17.742811 - The word file has been opened and parsed successfully 
+2020-11-14 21:37:20.080479 - The user has chosen option : '4' from the main menu 
+2020-11-14 21:37:21.512681 - The user has chosen sub-option : '4' from the sub-menu 
+2020-11-14 21:37:26.576732 - File analysis has ended - The user has entered : '4' and opted to run the program again 
+2020-11-14 21:37:27.688597 - The user has chosen option : '4' from the main menu 
+2020-11-14 21:37:28.462843 - The user has chosen sub-option : '3' from the sub-menu 
+2020-11-14 21:37:30.288354 - File analysis has ended - The user has entered : '4' and opted to run the program again 
+2020-11-14 21:37:32.256139 - The user has chosen option : '4' from the main menu 
+2020-11-14 21:37:33.016276 - The user has chosen sub-option : '2' from the sub-menu 
+2020-11-14 21:40:00.759629 - File analysis has ended - The user has entered : '3' and opted to run the program again 
+2020-11-14 21:40:12.943867 - The user has chosen option : '1' from the main menu 
