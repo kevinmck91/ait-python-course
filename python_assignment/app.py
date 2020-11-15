@@ -1,11 +1,10 @@
 # A00679670
 
 import math
-from datetime import datetime
 file_path = "avocado.csv"
 
 with open("./log.txt", "a") as log_file:
-    log_file.write(f"\n{datetime.now()}  ****** The Application has been initialised ******  \n")
+    log_file.write(f"\n***** The Application has been initialised ******  \n")
     log_file.close()
 
 ### Import the file with try/except and split each line into a seperate set of strings
@@ -79,16 +78,16 @@ try:
 
                 # Write any parse exceptions to the log and print a note of the error to the user
                 with open("./log.txt", "a") as log_file:
-                    log_file.write(f"{datetime.now()} - Unable line parse line : {line_count} of the file {file_path} : {e} \n")
+                    log_file.write(f"Unable line parse line : {line_count} of the file {file_path} : {e} \n")
                     log_file.close()
 
                 print(f"Note : Unable to parse line : {line_count} of the file {file_path}\n")
 
             line_count = line_count + 1
 
-    # If no file_pat exception has occurred write to the log that the
+    # If no file_path exception has occurred write to the log that the
     with open("./log.txt", "a") as log_file:
-        log_file.write(f"{datetime.now()} - The word file has been opened and parsed successfully \n")
+        log_file.write(f"The word file has been opened and parsed successfully \n")
         log_file.close()
 
     command = ""
@@ -97,7 +96,7 @@ try:
 except Exception as e:
 
     with open("./log.txt", "a") as log_file:
-        log_file.write(f"{datetime.now()} - Unable to locate the file {file_path} : {e} \n")
+        log_file.write(f"Unable to locate the file {file_path} : {e} \n")
         log_file.close()
 
     print(f"Unable to locate file {file_path}")
@@ -121,7 +120,7 @@ while command != "Q":
     ).upper()
 
     with open("./log.txt", "a") as log_file:
-        log_file.write(f"{datetime.now()} - The user has chosen option : '{command}' from the main menu \n")
+        log_file.write(f"The user has chosen option : '{command}' from the main menu \n")
         log_file.close()
 
     print(" ")
@@ -130,7 +129,7 @@ while command != "Q":
 
         break
 
-    ### if the user chooses 1 from the main menu...
+    ### if the user chooses 2 from the main menu...
     elif command == "2":
 
         ### Show the user the Sub-menu-1
@@ -144,7 +143,7 @@ while command != "Q":
         )
 
         with open("./log.txt", "a") as log_file:
-            log_file.write(f"{datetime.now()} - The user has chosen sub-option : '{command_one}' from the sub-menu \n")
+            log_file.write(f"The user has chosen sub-option : '{command_one}' from the sub-menu \n")
             log_file.close()
 
         ### Sub-menu-1 Option 1
@@ -167,7 +166,7 @@ while command != "Q":
             print(f"    {command_one} is an invalid selection\n")
 
 
-    ### if the user chooses 2 from the main menu...
+    ### if the user chooses 3 from the main menu...
     elif command == "3":
 
         ### Show the user the Sub-menu-2
@@ -181,7 +180,7 @@ while command != "Q":
         )
 
         with open("./log.txt", "a") as log_file:
-            log_file.write(f"{datetime.now()} - The user has chosen sub-option : '{command_two}' from the sub-menu \n")
+            log_file.write(f"The user has chosen sub-option : '{command_two}' from the sub-menu \n")
             log_file.close()
 
         ### Sub-menu-2 Option 1
@@ -221,7 +220,7 @@ while command != "Q":
             print(f"    {command_two} is an invalid selection")
 
 
-    ### if the user chooses 3 from the main menu...
+    ### if the user chooses 4 from the main menu...
     elif command == "4":
 
         ### Show the user the Sub-menu-3
@@ -235,7 +234,7 @@ while command != "Q":
         )
 
         with open("./log.txt", "a") as log_file:
-            log_file.write(f"{datetime.now()} - The user has chosen sub-option : '{command_three}' from the sub-menu \n")
+            log_file.write(f"The user has chosen sub-option : '{command_three}' from the sub-menu \n")
             log_file.close()
 
         ### Sub-menu-3 Option 1
@@ -319,11 +318,11 @@ while command != "Q":
             print(f"    {command_three} is an invalid selection \n")
 
             with open("./log.txt", "a") as log_file:
-                log_file.write(f"{datetime.now()} - The user has invalid option : '{command}' from the sub menu \n")
+                log_file.write(f"The user has invalid option : '{command}' from the sub menu \n")
                 log_file.close()
 
 
-    ### if the user chooses 4 from the main menu...
+    ### if the user chooses 1 from the main menu...
     elif command == "1":
         print(f"    There are {line_count} unique lines in the file")
         print(f"    The Max/Min Average price of an individual avocado: €{min(list_average_price)} / €{max(list_average_price)}")
@@ -338,7 +337,7 @@ while command != "Q":
     else:
         print("Please enter a valid command\n")
         with open("./log.txt", "a") as log_file:
-            log_file.write(f"{datetime.now()} - The user has chosen an invalid option : '{command} from the main menu \n")
+            log_file.write(f"The user has chosen an invalid option : '{command} from the main menu \n")
             log_file.close()
 
 
@@ -354,18 +353,18 @@ while command != "Q":
 
         command = "Q"
         with open("./log.txt", "a") as log_file:
-            log_file.write(f"{datetime.now()} - File analysis has ended - The user has entered : '{continue_command}' and opted to terminate the program \n")
+            log_file.write(f"File analysis has ended - The user has entered : '{continue_command}' and opted to terminate the program \n")
             log_file.close()
 
     ### The user opted to start again...
     else:
 
         with open("./log.txt", "a") as log_file:
-            log_file.write(f"{datetime.now()} - File analysis has ended - The user has entered : '{continue_command}' and opted to run the program again \n")
+            log_file.write(f"File analysis has ended - The user has entered : '{continue_command}' and opted to run the program again \n")
             log_file.close()
 
 print("The application has ended.")
 
 with open("./log.txt", "a") as log_file:
-    log_file.write(f"{datetime.now()} - the application has ended \n")
+    log_file.write(f"The application has ended \n")
     log_file.close()
