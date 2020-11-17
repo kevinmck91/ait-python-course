@@ -1,0 +1,22 @@
+
+***** The Application has been initialised ******  
+The word file has been opened and parsed successfully 
+
+***** The Application has been initialised ******  
+
+***** The Application has been initialised ******  
+The word file has been opened and parsed successfully 
+
+***** The Application has been initialised ******  
+Unable line parse line : 22 of the file ./avocado.csv : too many values to unpack (expected 14) 
+
+***** The Application has been initialised ******  
+Unable line parse line : 22 of the file ./avocado.csv : too many values to unpack (expected 14) 
+
+***** The Application has been initialised ******  
+Unable line parse line : 22 of the file ./avocado.csv : too many values to unpack (expected 14) 
+The word file has been opened and parsed successfully 
+
+***** The Application has been initialised ******  
+Unable line parse line : 22 of the file ./avocado.csv : too many values to unpack (expected 14) 
+The word file has been opened and parsed successfully 

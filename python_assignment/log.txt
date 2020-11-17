@@ -9,3 +9,6 @@ The user has chosen option : '2' from the main menu
 The user has chosen sub-option : '2' from the sub-menu 
 File analysis has ended - The user has entered : 'q' and opted to terminate the program 
 The application has ended
+
+***** The Application has been initialised ******  
+The word file has been opened and parsed successfully 
