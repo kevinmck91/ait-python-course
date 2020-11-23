@@ -1,8 +1,0 @@
-Refactoring Part 1 - 17/11/2020
-
-I need to refactor the code to make it readable, modular, testable
-
-1. Move the FILE IO application to an external file
-2. Pass in the file location and the name of the List you want returned
-3. In order not to be parsing the whole dataset each time one list is required, add control structure to only populate required list
-2. Include the handy popup details and comments with the function for

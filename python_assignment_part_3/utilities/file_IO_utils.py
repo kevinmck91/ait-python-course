@@ -1,4 +1,30 @@
-def parse_file(file_path, list_return_type) -> list:
+def parse_file(file_path: str, list_return_type: str) -> list:
+    """
+        This function is designed take in a File Path and a Return type.
+
+        Parameters
+        ----------
+        file_path : The path of the file that is to be parsed
+        list_return_type : The variable/Column that is required as an output. Possible parameters include
+            - date
+            - average_price
+            - total_volume
+            - 4046
+            - 4225
+            - 4770
+            - total_bags
+            - small_bags
+            - large_bags
+            - xlarge_bags
+            - type
+            - year
+            - list_region
+        Returns
+        -------
+        TYPE
+            List - a list of the required type is returned
+
+        """
 
     ### Import the file with try/except and split each line into a seperate set of strings
     ### store each string of the same type to a list for processing
