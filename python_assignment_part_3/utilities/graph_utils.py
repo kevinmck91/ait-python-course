@@ -1,23 +1,28 @@
 import matplotlib.pyplot as plt
 
 
-def generate_pie_chart_single(my_list: str):
+def generate_pie_chart(catagories_list: list, figures_list: list, name):
 
     dict = {}
 
-    for value in my_list:
+    for key, value in zip(catagories_list, figures_list):
 
-        if not value in dict:
-            dict[value] = 1
+        if key in dict:
+            current_value = dict[key]
+            accumulative_value = current_value + value
+            dict[key] = accumulative_value
         else:
-            dict[value] += 1
+            dict[key] = value
 
     fig, ax = plt.subplots()
 
-    ax.set_title("Pie chart generated from list : ")
+    ax.set_title(name)
 
-    ax.pie(dict.values(), labels =dict.keys())
+    ax.pie(dict.values(), labels=dict.keys(), autopct="%.0f%%")
+
     plt.show()
+
+
 
 
 def generate_barchart_single(my_list: str):
