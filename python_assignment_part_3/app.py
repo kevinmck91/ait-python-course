@@ -35,7 +35,13 @@ year_list = file_IO_utils.parse_file("./avocado.csv", "year")
 
 ### BAR CHARTS ###
 
-graph_utils.generate_barchart(region_list, volume_list)
+#graph_utils.generate_barchart(region_list, volume_list)
 #graph_utils.generate_barchart(type_list,total_bags_list)
-graph_utils.generate_barchart(year_list,volume_list)
+#graph_utils.generate_barchart(year_list,volume_list)
 
+
+### BOX PLOT CHART ###
+#graph_utils.generate_boxplot(type_list,volume_list,"organic","Total Volume Sold")
+#graph_utils.generate_boxplot(type_list,volume_list,"organic","Total Volume Sold")
+
+graph_utils.generate_category_figure_boxplot(region_list,volume_list,"Boston","Total Volume Sold")

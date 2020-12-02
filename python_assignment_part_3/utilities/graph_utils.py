@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 
 
-def generate_pie_chart(categories_list: list, figures_list: list, name="Pie Chart"):
+def generate_category_figure_pie_chart(categories_list: list, figures_list: list, name="Pie Chart"):
     """
         This function is designed to take in two lists and generate a Pie Chart
 
@@ -38,7 +38,7 @@ def generate_pie_chart(categories_list: list, figures_list: list, name="Pie Char
 
 
 
-def generate_barchart(categories_list: list, figures_list: list, name="Bar Chart", label_x="Values" ,label_y="Categories"):
+def generate_category_figure_barchart(categories_list: list, figures_list: list, name="Bar Chart", label_x="Values" ,label_y="Categories"):
     """
         This function is designed to take in two lists and generate a Bar Chart
 
@@ -84,5 +84,36 @@ def generate_barchart(categories_list: list, figures_list: list, name="Bar Chart
     ax.ticklabel_format(axis='x', style='sci', scilimits=(5, 15))
 
     plt.show()
+
+def generate_basic_boxplot(list_of_figures, y_axis_name, x_axis_name):
+    fig, ax = plt.subplots()
+
+    ax.boxplot(list_of_figures, showfliers=False)
+
+    ax.set_title("Boxplot")
+    ax.set_ylabel(y_axis_name)
+    ax.set_xlabel(x_axis_name)
+    ax.ticklabel_format(axis='y', style='sci', scilimits=(5, 15))
+    plt.show()
+
+def generate_category_figure_boxplot(categories_list, figures_list, category_name, figures_name, name="Box Plot"):
+    """
+        This function takes in a list of values, a list of figures and a parameter
+
+        Parameters
+        ----------
+        list of figures - The values that will be repersented on the box plot
+        list of categories - a list of categories, once category will be chosen to narrow down the list of values
+        category_name
+
+        Returns
+        -------
+        No Return Type - A graph is saved to the file system
+
+    """
+
+    list_of_figures = [value for key, value in zip(categories_list, figures_list) if key == category_name]
+
+    generate_basic_boxplot(list_of_figures, figures_name, category_name)
 
 
