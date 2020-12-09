@@ -21,7 +21,7 @@ print(proxy)
 proxy["port"] = 8080
 
 print(proxy.get('username'))
-print(proxy.get(2, "test"))
+print(proxy.get(2, "mytest"))
 
 
 

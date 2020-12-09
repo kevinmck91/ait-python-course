@@ -11,9 +11,7 @@ file_path = "./avocado.csv"
 type_list       = file_IO_utils.parse_file(file_path, "type")
 region_list     = file_IO_utils.parse_file(file_path, "list_region")
 year_list       = file_IO_utils.parse_file(file_path, "year")
-
 date_list       = file_IO_utils.parse_file(file_path, "date")
-
 volume_list     = file_IO_utils.parse_file(file_path, "total_volume")
 total_bags_list = file_IO_utils.parse_file(file_path, "total_bags")
 small_bags_list = file_IO_utils.parse_file(file_path, "small_bags")

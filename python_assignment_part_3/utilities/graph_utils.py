@@ -100,7 +100,8 @@ def generate_category_figure_barchart(categories_list: list, figures_list: list,
 
      # If the categories list is the list of regions, remove negligible states as it skews the graph
     if "TotalUS" in dict:
-       dict = {k: v for k, v in dict.items() if v >= 150000000}
+        del dict["TotalUS"]
+        dict = {k: v for k, v in dict.items() if v >= 75000000  }
 
     fig, ax = plt.subplots()
 
@@ -121,7 +122,7 @@ def generate_category_figure_barchart(categories_list: list, figures_list: list,
     plt.savefig(f'./graph_outputs/{name}.png')
     print(f"\'{name}.png\' has been saved in the folder : graph_outputs")
 
-def generate_basic_boxplot(list_of_figures, name="", x_label="", y_label=""):
+def generate_basic_boxplot(figures_list, name="", x_label="", y_label=""):
     """
         This function is designed to take in a list and generate a Box Plot
 
@@ -143,7 +144,7 @@ def generate_basic_boxplot(list_of_figures, name="", x_label="", y_label=""):
     ax.set_ylabel(y_label)
     ax.set_xlabel(x_label)
 
-    ax.boxplot(list_of_figures, showfliers=False)
+    ax.boxplot(figures_list, showfliers=False)
 
     # Format the y-axis ticks to prevent exponential notation
     ax.ticklabel_format(axis='y', style='sci', scilimits=(2, 15))
