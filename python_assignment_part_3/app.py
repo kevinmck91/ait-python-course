@@ -19,22 +19,17 @@ region_list = file_IO_utils.parse_file("./avocado.csv", "list_region")
 year_list = file_IO_utils.parse_file("./avocado.csv", "year")
 
 ### PIE CHARTS ###
-
 #name1 = "Volume of Avocados Sold by Type"
 #graph_utils.generate_pie_chart(type_list,volume_list, name1)
-
 #name2 = "Volume of Bags of Avocados Sold by Type"
 #graph_utils.generate_pie_chart(type_list,total_bags_list, name2)
-
 #name3 = "Volume of Avocados Sold by year"
 #graph_utils.generate_pie_chart(year_list,volume_list, name3)
-
 #name4 = "Volume of Avocados Sold by Region"
-#graph_utils.generate_pie_chart(region_list,volume_list, name4)
+#graph_utils.generate_category_figure_pie_chart(region_list,volume_list, name4)
 
 
 ### BAR CHARTS ###
-
 #graph_utils.generate_barchart(region_list, volume_list)
 #graph_utils.generate_barchart(type_list,total_bags_list)
 #graph_utils.generate_barchart(year_list,volume_list)
@@ -43,5 +38,8 @@ year_list = file_IO_utils.parse_file("./avocado.csv", "year")
 ### BOX PLOT CHART ###
 #graph_utils.generate_boxplot(type_list,volume_list,"organic","Total Volume Sold")
 #graph_utils.generate_boxplot(type_list,volume_list,"organic","Total Volume Sold")
+#graph_utils.generate_category_figure_boxplot(region_list,volume_list,"Boston","Total Volume Sold")
 
-graph_utils.generate_category_figure_boxplot(region_list,volume_list,"Boston","Total Volume Sold")
+### BOX PLOT CHART ###
+graph_utils.generate_barchart_boxplot(region_list,volume_list, "Regions", "volumes")
+

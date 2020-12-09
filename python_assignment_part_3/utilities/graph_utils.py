@@ -27,6 +27,7 @@ def generate_category_figure_pie_chart(categories_list: list, figures_list: list
         else:
             dict[key] = value
 
+
     fig, ax = plt.subplots()
 
     ax.set_title(name)
@@ -58,17 +59,13 @@ def generate_category_figure_barchart(categories_list: list, figures_list: list,
     for key, value in zip(categories_list, figures_list):
 
         if key in dict:
-
-            if key == "TotalUS":
-                continue
-
             current_value = dict[key]
             accumulative_value = current_value + value
             dict[key] = accumulative_value
         else:
-            if key == "TotalUS":
-                continue
             dict[key] = value
+
+    del dict["TotalUS"]
 
     fig, ax = plt.subplots()
 
@@ -86,6 +83,20 @@ def generate_category_figure_barchart(categories_list: list, figures_list: list,
     plt.show()
 
 def generate_basic_boxplot(list_of_figures, y_axis_name, x_axis_name):
+    """
+        This function takes in a list of values, a y-axis name and an x-axis name
+
+        Parameters
+        ----------
+        list of figures - The values that will be repersented on the box plot
+        y_axis_name,
+        x_axis_name
+
+        Returns
+        -------
+        No Return Type - A graph is saved to the file system
+
+    """
     fig, ax = plt.subplots()
 
     ax.boxplot(list_of_figures, showfliers=False)
@@ -117,3 +128,19 @@ def generate_category_figure_boxplot(categories_list, figures_list, category_nam
     generate_basic_boxplot(list_of_figures, figures_name, category_name)
 
 
+def generate_barchart_boxplot(categories_list, figures_list, y_axis_name, x_axis_name):
+
+    dict = {dict_key : [ list_value for list_key, list_value in zip(categories_list, figures_list) if list_key == dict_key ] for dict_key in categories_list}
+    del dict["TotalUS"]
+
+
+    fig, ax = plt.subplots()
+    ax.set_ylabel(y_axis_name)
+    ax.set_xlabel(x_axis_name)
+    ax.set_title("Boxplots")
+
+    ax.ticklabel_format(axis='x', style='sci', scilimits=(5, 15))
+    plt.setp(ax.get_yticklabels(), fontsize=10)
+
+    ax.boxplot(dict.values(), vert=False, labels=dict.keys(), showfliers=False)
+    plt.show()
