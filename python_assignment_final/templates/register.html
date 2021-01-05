@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div>
+    <h2>Register Page</h2>
+
+    <h4 class="text-danger">{{err_msg}}</h4>
+
+    <form action="#" method="post">
+        <p>Name : </p>
+        <p><input type="text" name="nm"/></p>
+        <p>Password</p>
+        <p><input type="password" name="pw"/></p>
+        <p><input type="submit" value="Submit"/></p>
+    </form>
+</div>
+{% endblock %}

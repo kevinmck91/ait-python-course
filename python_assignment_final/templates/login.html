@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div>
+    <h2>Login Page</h2>
+
+    <h4 class="text-primary" >{{info}}</h4>
+    <h4 class="text-danger">{{err_msg}}</h4>
+    <h4>You must Login before you can access the Secure page</h4>
+    <form action="#" method="post">
+        <p>Name : </p>
+        <p><input type="text" name="nm"/></p>
+        <p>Password</p>
+        <p><input type="password" name="pw"/></p>
+        <p><input type="submit" value="Submit"/></p>
+    </form>
+
+</div>
+{% endblock %}

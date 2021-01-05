@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div>
+    <h2>Welcome </h2>
+
+    <h4>This page demos some aspects of the Flask Web Framework</h4>
+
+    <h4>The current date/time is : {{current_date_time}}</h4>
+
+    {% for x in range(3) %}
+    <p>This is the output of a for loop - Iteration </p>
+    {% endfor %}
+</div>
+{% endblock %}
